@@ -1,11 +1,37 @@
 #![allow(dead_code)]
 pub mod discord_name;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
-  fn strobogrammatic_numbers(low: i32, high: i32) -> i32 {
-    // ...
+  pub fn is_strobogrammatic(number: &i32) -> bool {
+    let strobogrammatic_pairs: Vec<(i32, i32)> = vec![(0, 0), (1, 1), (6, 9), (8, 8), (9, 6)];
+    let digits: Vec<i32> = number
+      .to_string()
+      .chars()
+      .map(|c| c.to_digit(10).unwrap() as i32)
+      .collect();
+    let mut left = 0;
+    let mut right = digits.len() - 1;
+    while left <= right {
+      let pair = (digits[left], digits[right]);
+      if !strobogrammatic_pairs.contains(&pair) {
+        return false;
+      }
+      left += 1;
+      right -= 1;
+    }
+    true
+  }
+
+  pub fn strobogrammatic_numbers(low: i32, high: i32) -> i32 {
+    let mut count = 0;
+    for num in low..=high {
+      if Solution::is_strobogrammatic(&num) {
+        count += 1;
+      }
+    }
+    count
   }
 }
 
