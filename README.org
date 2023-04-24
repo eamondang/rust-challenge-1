@@ -6,6 +6,8 @@
 #+begin_quote
 + Trò chơi giải thuật toán với giải thưởng được tổ chức hàng tuần trên [[https://discord.gg/MwQSTmuV5w][Rustaceans Communication]]
 + Trao giải trực tiếp qua livestream trên VBI vào cuối tuần trên [[https://www.youtube.com/@VBIBlockchainAcademy][VBI Channel]]
++ Hình thức sẽ chọn ra bạn có điểm benchmark cao nhất trong các solution.
++ Cách thức nộp bài sẽ nộp dưới dạng merge git vào branch tương ứng.
 #+end_quote
 
 * Challenges :TOC:
