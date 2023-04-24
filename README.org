@@ -23,11 +23,9 @@ Lưu ý rằng các số không thể có các chữ số dẫn đầu bằng 0,
 #+end_quote
 
 Ví dụ:
-#+begin_quote
-Input: low = "50", high = "100"
-Output: 3
-Giải thích: Các số strobogrammatic từ 50 đến 100 là ["69", "88", "96"], do đó kết quả trả về là 3.
-#+end_quote
++ Input: low = "50", high = "100"
++ Output: 3
++ Giải thích: Các số strobogrammatic từ 50 đến 100 là ["69", "88", "96"], do đó kết quả trả về là 3.
 
 Một số gợi ý:
 + Sử dụng đệ quy để tạo ra tất cả các số strobogrammatic có độ dài n.
