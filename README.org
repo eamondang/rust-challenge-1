@@ -19,9 +19,8 @@
 ** Đề bài
 + Cho hai chuỗi số low và high, hãy tìm tất cả các số strobogrammatic nằm trong khoảng từ low đến high.
 #+begin_quote
-Một số được gọi là *strobogrammatic* nếu nó có thể được quay 180 độ và trông giống như chính nó. Các chữ số strobogrammatic là 0, 1, 6, 8, 9.
-Lưu ý rằng các số không thể có các chữ số dẫn đầu bằng 0, ví dụ như "00".
-1 <= n <= 10^18
++ Một số được gọi là *strobogrammatic* nếu nó có thể được quay 180 độ và trông giống như chính nó. Các chữ số strobogrammatic là 0, 1, 6, 8, 9.
++ Lưu ý rằng các số không thể có các chữ số dẫn đầu bằng 0, ví dụ như "00".
 #+end_quote
 
 Ví dụ:
