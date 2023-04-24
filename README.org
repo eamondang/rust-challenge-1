@@ -13,7 +13,7 @@
 * Challenges :TOC:
 - [[#challenge-1---strobogrammatic-find---week-1][Challenge 1 - Strobogrammatic Find - Week 1]]
   - [[#đề-bài][Đề bài]]
-  - [[#giải-thưởng][Giải thưởng]]
+  - [[#module-tests][Module tests]]
 
 * Challenge 1 - Strobogrammatic Find - Week 1
 ** Đề bài
@@ -24,12 +24,83 @@
 #+end_quote
 
 Ví dụ:
-+ Input: low = "50", high = "100"
++ Input: low = 50, high = 100
 + Output: 3
 + Giải thích: Các số strobogrammatic từ 50 đến 100 là ["69", "88", "96"], do đó kết quả trả về là 3.
+
++ 10 <= low <= 10000
++ 10 <= high <= 10000
++ low < high
 
 Một số gợi ý:
 + Sử dụng đệ quy để tạo ra tất cả các số strobogrammatic có độ dài n.
 + Kiểm tra xem mỗi số có nằm trong khoảng từ low đến high không và đếm số lượng số thỏa mãn yêu cầu đó.
 
-** Giải thưởng
+[[./src/week1/mod.rs]]
+
+** Module tests
+#+begin_src rustic
+#![allow(dead_code)]
+pub mod discord_name;
+
+struct Solution;
+
+impl Solution {
+  fn strobogrammatic_numbers(low: i32, high: i32) -> i32 {
+    // ...
+  }
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  #[test]
+  fn one_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(50, 100), 3);
+  }
+
+  #[test]
+  fn two_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(10, 100), 4);
+  }
+
+  #[test]
+  fn three_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(10, 1000), 16);
+  }
+
+  #[test]
+  fn four_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(200, 5000), 14);
+  }
+
+  #[test]
+  fn five_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(100, 10000), 32);
+  }
+
+  #[test]
+  #[should_panic]
+  fn six_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(5, 10000), 32);
+  }
+
+  #[test]
+  #[should_panic]
+  fn seven_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(1000, 500), 32);
+  }
+
+  #[test]
+  #[should_panic]
+  fn eight_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(10, 10000), 32);
+  }
+
+  #[test]
+  fn full_strobogrammatic_numbers() {
+    assert_eq!(Solution::strobogrammatic_numbers(10, 10000), 36);
+  }
+}
+#+end_src
