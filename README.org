@@ -1,0 +1,36 @@
+#+TITLE: Rust Challenges
+#+DESCRIPTION: Các Challenges hàng tuần - có giải thưởng.
+#+AUTHOR: Dang Quang Vu
+#+EMAIL: eamondang@gmail.com
+
+#+begin_quote
++ Trò chơi giải thuật toán với giải thưởng được tổ chức hàng tuần trên [[https://discord.gg/MwQSTmuV5w][Rustaceans Communication]]
++ Trao giải trực tiếp qua livestream trên VBI vào cuối tuần trên [[https://www.youtube.com/@VBIBlockchainAcademy][VBI Channel]]
+#+end_quote
+
+* Challenges :TOC:
+- [[#challenge-1---strobogrammatic-find---week-1][Challenge 1 - Strobogrammatic Find - Week 1]]
+  - [[#đề-bài][Đề bài]]
+  - [[#giải-thưởng][Giải thưởng]]
+
+* Challenge 1 - Strobogrammatic Find - Week 1
+** Đề bài
++ Cho hai chuỗi số low và high, hãy tìm tất cả các số strobogrammatic nằm trong khoảng từ low đến high.
+#+begin_quote
+Một số được gọi là *strobogrammatic* nếu nó có thể được quay 180 độ và trông giống như chính nó. Các chữ số strobogrammatic là 0, 1, 6, 8, 9.
+Lưu ý rằng các số không thể có các chữ số dẫn đầu bằng 0, ví dụ như "00".
+1 <= n <= 10^18
+#+end_quote
+
+Ví dụ:
+#+begin_quote
+Input: low = "50", high = "100"
+Output: 3
+Giải thích: Các số strobogrammatic từ 50 đến 100 là ["69", "88", "96"], do đó kết quả trả về là 3.
+#+end_quote
+
+Một số gợi ý:
++ Sử dụng đệ quy để tạo ra tất cả các số strobogrammatic có độ dài n.
++ Kiểm tra xem mỗi số có nằm trong khoảng từ low đến high không và đếm số lượng số thỏa mãn yêu cầu đó.
+
+** Giải thưởng
