@@ -36,7 +36,7 @@ Một số gợi ý:
 + Sử dụng đệ quy để tạo ra tất cả các số strobogrammatic có độ dài n.
 + Kiểm tra xem mỗi số có nằm trong khoảng từ low đến high không và đếm số lượng số thỏa mãn yêu cầu đó.
 
-[[./src/week1/mod.rs]]
+[[./src/week1/mod.rs][Week1 Strobogrammatic Numbers]]
 
 ** Module tests
 #+begin_src rustic
