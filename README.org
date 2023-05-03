@@ -22,14 +22,14 @@
 + Cho một array các string, và max_width.
 + Nhiệm vụ là định dạng văn bản làm sao để mỗi dòng có đúng max_width ký tự và được *căn giữa.*
 
-: input
++ input
 #+begin_src rustic
 words = ["TowerBFT", "allows", "the", "Solana", "network", "to", "process", "thousands", "of", "transactions", "per", "second", "and", "is", "easily", "scalable", "to", "meet", "the", "growing", "demands", "of", "the", "blockchain", "network."]
 
 max_width = 16
 #+end_src
 
-: output
++ output
 #+begin_src rustic
 [
   "TowerBFT  allows",
@@ -60,13 +60,13 @@ max_width = 16
 + 1 <= len(words) <= 300
 #+end_quote
 
-: more examples
++ more examples
 #+begin_src rust
 words = ["This", "is", "a", "simple", "test", "case", "for", "center", "justification."]
 max_width = 14
 #+end_src
 
-: output
++ output
 #+begin_src rust
 [
   "This    is   a",
