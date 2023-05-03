@@ -11,9 +11,92 @@
 #+end_quote
 
 * Challenges :TOC:
-- [[#challenge-1---strobogrammatic-find---week-1][Challenge 1 - Strobogrammatic Find - Week 1]]
+- [[#challenge-2][Challenge 2]]
   - [[#đề-bài][Đề bài]]
-  - [[#module-tests][Module tests]]
+- [[#challenge-1---strobogrammatic-find---week-1][Challenge 1 - Strobogrammatic Find - Week 1]]
+  - [[#đề-bài-1][Đề bài]]
+  - [[#winner][Winner]]
+
+* Challenge 2
+** Đề bài
++ Cho một array các string, và max_width.
++ Nhiệm vụ là định dạng văn bản làm sao để mỗi dòng có đúng max_width ký tự và được *căn giữa.*
+
+: input
+#+begin_src rustic
+words = ["TowerBFT", "allows", "the", "Solana", "network", "to", "process", "thousands", "of", "transactions", "per", "second", "and", "is", "easily", "scalable", "to", "meet", "the", "growing", "demands", "of", "the", "blockchain", "network."]
+
+max_width = 16
+#+end_src
+
+: output
+#+begin_src rustic
+[
+  "TowerBFT  allows",
+  "the       Solana",
+  "network       to",
+  "process         ",
+  "thousands     of",
+  "transactions per",
+  "second   and  is",
+  "easily  scalable",
+  "to    meet   the",
+  "growing  demands",
+  "of           the",
+  "blockchain      ",
+  "network.        ",
+]
+#+end_src
+
++ Notes:
+  + Khoảng cách ' ' nên được phân bố đều nhất có thể.
+  + Đối với dòng cuối thì sẽ không canh giữa.
+
+#+begin_quote
++ Độ dài của mỗi từ được đảm bảo lớn hơn 0 và không vượt quá max_width.
++ Mảng nhập vào words chứa ít nhất một từ.
++ 1 <= max_width <= 100
++ 1 <= len(words[i]) <= max_width
++ 1 <= len(words) <= 300
+#+end_quote
+
+: more examples
+#+begin_src rust
+words = ["This", "is", "a", "simple", "test", "case", "for", "center", "justification."]
+max_width = 14
+#+end_src
+
+: output
+#+begin_src rust
+[
+  "This    is   a",
+  "simple    test",
+  "case       for",
+  "center        ",
+  "justification.",
+]
+#+end_src
+
+#+begin_src rustic
+let words = vec!["The", " Gulf", " Stream", " is", " driven", " by", " a", " combination", " of", " wind", " patterns,", " temperature", " differences,", " and", " the", " Earth's", " rotation.",];
+let max_width = 13;
+#+end_src
+#+begin_src rust
+[
+    "The      Gulf",
+    " Stream    is",
+    " driven    by",
+    " a           ",
+    " combination ",
+    " of      wind",
+    " patterns,   ",
+    " temperature ",
+    " differences,",
+    " and      the",
+    " Earth's     ",
+    " rotation.   ",
+]
+#+end_src
 
 * Challenge 1 - Strobogrammatic Find - Week 1
 ** Đề bài
@@ -38,6 +121,5 @@ Một số gợi ý:
 
 [[./src/week1/mod.rs][Week1 Strobogrammatic Numbers]]
 
-
-
-
+** Winner
++ phuctabahoang#4250
